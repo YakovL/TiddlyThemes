@@ -547,44 +547,43 @@ body {font-size:0.8em;}
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
-<div title="PageTemplate" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="BleachTheme">
-<pre>&lt;!--{{{--&gt;
+<div title="BleachTheme" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310121020" modified="202310121032" changecount="3">
+<pre>|Name        |BleachTheme|
+|Description |A ~TiddlyWiki _ theme|
+|Version     |1.1|
+|Author      |Saq Imtiaz, Yakov Litvin|
+|Source      |https://yakovl.github.io/TiddlyThemes/themes/bleach.html#BleachTheme|
+|~PageTemplate|##PageTemplate|
+|~StyleSheet  |##StyleSheet|
+Notes:
+* probably, some colors should be adjusted to match the rest of the theme (annotations, wizards, table headers, checkboxes);
+* ideally, the styles should be linted and restructured (update ColorPalette).
+
+!PageTemplate
+&lt;!--{{{--&gt;
 &lt;div id='header' class='header'&gt;
     &lt;div id='title'&gt;
         &lt;div id='topMenu' refresh='content' tiddler='MainMenu'&gt;&lt;/div&gt;
         &lt;span class='siteTitle' refresh='content' tiddler='SiteTitle'&gt;&lt;/span&gt;&amp;nbsp;
         &lt;span class='siteSubtitle' refresh='content' tiddler='SiteSubtitle'&gt;&lt;/span&gt;
     &lt;/div&gt;
-
 &lt;/div&gt;
 
 &lt;div id='sidebar'&gt;
-&lt;div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'&gt;&lt;/div&gt;
-&lt;div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'&gt;&lt;/div&gt;
+    &lt;div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'&gt;&lt;/div&gt;
+    &lt;div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id='displayArea'&gt;
-&lt;div id='messageArea'&gt;&lt;/div&gt;
-&lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
-&lt;div class='clearAll'&gt;&lt;/div&gt;
+    &lt;div id='messageArea'&gt;&lt;/div&gt;
+    &lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
+    &lt;div class='clearAll'&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id='contentFooter' refresh='content' tiddler='contentFooter'&gt;&lt;/div&gt;
-&lt;!--}}}--&gt;</pre>
-</div>
-<div title="StyleSheet" modifier="Yakov Litvin" created="200701130013" modified="202310120906" tags="BleachTheme" changecount="25">
-<pre>/*{{{*/
-/* Bleach Theme for TiddlyWiki
-   Design and CSS by Saq Imtiaz
-   Minor updates for TW 2.9.4, tweaks by Yakov Litvin. Notes:
-   - probably, some colors should be adjusted to match the rest of the theme (annotations, wizards, table headers, checkboxes);
-   - ideally, the styles should be linted, restructured (update ColorPalette), and packed into an actual theme.
-   Version 1.1
-*/
-/*}}}*/
-/***
+&lt;!--}}}--&gt;
 
-!General
-***/
+!StyleSheet
 /*{{{*/
+/* General */
 #contentWrapper {
 	margin: 2.5em auto;
 	max-width: 70em;
@@ -597,11 +596,9 @@ height:1%;
 
 .clearAll {clear:both;}
 .tagClear {clear:none;}
-/*}}}*/
-/***
 
-!Header
-***/
+
+/* Header */
 /*{{{*/
 #header {
 	background: [[ColorPalette::Background]];
@@ -626,25 +623,17 @@ color: #999999; margin-top:0.5em !important; margin-top:1em; margin-left:3em;
 #topMenu br {display:none; }
 #topMenu { color:#000;padding: 1em 1em;}
 #topMenu a, #topMenu .tiddlyLink, #topMenu .button {margin:0 0.5em; color:#666;}
-/*}}}*/
-/***
 
-!displayArea
-***/
-/*{{{*/
+
+/* displayArea */
 #displayArea {margin-left:1.35em; margin-right:16.3em; margin-top:0; padding-top:1em; padding-bottom:10px;}
-/*}}}*/
-/***
 
-!Sidebar
-***/
-/*{{{*/
+
+/* Sidebar */
 #sidebar {position:relative;float:right; line-height: 1.4em; border-left:0px solid#000; display:inline; right:0; 
 width: 16em;}
 
-/***
-!SidebarOptions
-***/
+/* SidebarOptions */
 #sidebarOptions {padding-left:0.5em; border-left:1px solid #999;padding-top:1em;}
 
 #sidebarOptions a {
@@ -657,11 +646,16 @@ width: 16em;}
 		}
 #sidebarOptions input {border:1px solid #999; width:10em;}
 
+#sidebarOptions .sliderPanel {
+	background: [[ColorPalette::Background]];
+border:none;
+font-size: .9em;
+}
+#sidebarOptions .sliderPanel a {font-weight:normal; }
+#sidebarOptions .sliderPanel input {border:1px solid #999;width:auto;}
+#sidebarOptions .sliderPanel .txtOptionInput {border:1px solid #999;width:9em;}
 
-
-/***
-!SidebarTabs
-***/
+/* SidebarTabs */
 #sidebarTabs {border-left:1px solid #999;}
 #sidebarTabs .tabContents { background: [[ColorPalette::Background]]; }
 #sidebarTabs .tabContents .tiddlyLink, #sidebarTabs .tabContents .button{color:#999;}
@@ -694,16 +688,6 @@ padding-bottom:1px;
 #sidebarTabs .tabUnselected { border-bottom: none;padding-bottom:3px;}
 #sidebarTabs .tabSelected{padding-bottom:3px;}
 
-
-#sidebarOptions .sliderPanel {
-	background: [[ColorPalette::Background]];
-border:none;
-font-size: .9em;
-}
-#sidebarOptions .sliderPanel a {font-weight:normal; }
-#sidebarOptions .sliderPanel input {border:1px solid #999;width:auto;}
-#sidebarOptions .sliderPanel .txtOptionInput {border:1px solid #999;width:9em;}
-
 #sidebarTabs .tabContents {border-right:0; border-left:0; border-bottom:1px solid#999; padding-left:4px;}
  .listLink,#sidebarTabs .tabContents {line-height:1.5em;}
  .listTitle {color:#666;}
@@ -711,9 +695,9 @@ font-size: .9em;
 #sidebarTabs .tabUnselected:hover { border-bottom: none;padding-bottom:3px;color:#4F4B45}
 #sidebarTabs .txtMoreTab .tabContents {border-left:1px solid #999;}
 #sidebarTabs .txtMainTab .tabContents li a{font-weight:bold;}
-/*}}}*/
 
-/*{{{*/
+
+/* Others */
 .title {color:#EF680E;}
 .subtitle, .subtitle a { color: #999999; font-size: 1em;margin:0.2em; font-variant: small-caps;}
 .shadow .title{color:#999;}
@@ -772,9 +756,6 @@ border:none;
 		}
 
 
-
-
-
 .tagging, .tagged {
 	border: 1px solid #eee;
 	background-color: #F7F7F7;
@@ -807,9 +788,6 @@ border:none;
 }
 
 
-
-
-
 .popup {
 	background: #999;
 	border: 1px solid #999;
@@ -836,9 +814,6 @@ border:none;
 }
 
 
-
-
-
 #messageArea {
 	background: #f5f5f5;
 	color: #999;
@@ -846,11 +821,6 @@ border:none;
 }
 
 #messageArea a:hover { background:#f5f5f5; border:none;}
-
-
-
-
-
 
 
 .viewer blockquote {
@@ -894,18 +864,22 @@ h1 {font-size:18px;}
 h2 {font-size:16px;}
 h3 {font-size: 14px;}
 
+
 #contentFooter {background:#999; color:#dfdfdf; clear: both; padding: 0.5em 1em; }
 
 		#contentFooter a {
 			color: #dfdfdf;
 			border-bottom: 1px dotted #fff; font-weight:normal;
 		}
-		
+
 		#contentFooter a:hover {
 			color: #FFFFFF;
 			background-color:transparent;
-		}	
+		}
 /*}}}*/</pre>
+</div>
+<div title="SystemSettings" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310121020" changecount="1">
+<pre>txtTheme: BleachTheme</pre>
 </div>
 <div title="contentFooter" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="BleachTheme">
 <pre>Type the text for [[contentFooter]]</pre>
