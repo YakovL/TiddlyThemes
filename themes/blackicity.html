@@ -547,30 +547,33 @@ body {font-size:0.8em;}
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
-<div title="PageTemplate" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="BlackicityTheme">
-<pre>&lt;!--{{{--&gt;
+<div title="BlackicityTheme" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310120740" modified="202310121001" changecount="9">
+<pre>|Name        |BlackicityTheme|
+|Description |A ~TiddlyWiki black-gray-and-white theme|
+|Version     |1.1|
+|Author      |Saq Imtiaz, Yakov Litvin|
+|Source      |https://yakovl.github.io/TiddlyThemes/themes/blackicity.html#BlackicityTheme|
+|~PageTemplate|##PageTemplate|
+|~StyleSheet  |##StyleSheet|
+Notes:
+* annotations, wizard, checkboxes require adjustments for 2.9.4, too;
+* the horizontal page scroll bar should be fixed (removed);
+* ideally, the styles should be linted, restructured (update ColorPalette).
 
+!PageTemplate
+&lt;!--{{{--&gt;
 &lt;div id='topMenu' refresh='content' tiddler='MainMenu'&gt;&lt;/div&gt;
 &lt;div id='sidebar'&gt;
-&lt;div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'&gt;&lt;/div&gt;
-&lt;div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'&gt;&lt;/div&gt;
+  &lt;div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'&gt;&lt;/div&gt;
+  &lt;div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id='displayArea'&gt;
-&lt;div id='messageArea'&gt;&lt;/div&gt;
-&lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
+  &lt;div id='messageArea'&gt;&lt;/div&gt;
+  &lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!--}}}--&gt;</pre>
-</div>
-<div title="StyleSheet" modifier="Yakov Litvin" created="200701130013" modified="202310120727" tags="BlackicityTheme" changecount="8">
-<pre>/*{{{*/
-/* Blackicity Theme for TiddlyWiki
-   Design and CSS by Saq Imtiaz
-   Minor updates for TW 2.9.4, horizontal scrollbar fix by Yakov Litvin. Notes:
-   - annotations, wizard, checkboxes require adjustments, too;
-   - ideally, the styles should be linted, restructured (update ColorPalette), and packed into an actual theme.
-   Version 1.1
-*/
-/*}}}*/
+&lt;!--}}}--&gt;
+
+!StyleSheet
 /*{{{*/
 body{	font-family: &quot;Neue Helvetica&quot;, Helvetica, &quot;Lucida Grande&quot;, Verdana, sans-serif;
 	background-color: #fff;
@@ -618,9 +621,7 @@ border-color: #333;
 
 .toolbar .button:hover, .toolbar .highlight, .toolbar .marked, .toolbar a.button:active{color:#333; background:transparent;border:1px solid #fff;}
 
-/***
-!Sidebar
-***/
+/* Sidebar */
 #sidebar {
 	margin-bottom: 2em !important;
 	margin-bottom: 1em;
@@ -628,9 +629,7 @@ border-color: #333;
 }
 #sidebarTabs .tabContents { width: unset; }
 
-/***
-!SidebarOptions
-***/
+/* SidebarOptions */
 #sidebarOptions { padding-top:2em;background:#f3f3f3;padding-left:0.5em;}
 
 #sidebarOptions a {
@@ -663,9 +662,8 @@ background-color: #f3f3f3;
 border:none;
 border-bottom:1px dotted #111;
 }
-/***
-!SidebarTabs
-***/
+
+/* SidebarTabs */
  .listTitle {color:#222;}
 #sidebarTabs {background:#f3f3f3;}
 
@@ -694,9 +692,7 @@ border-bottom:1px dotted #111;
 
 
 
-/***
-!Tabs
-***/
+/* Tabs */
 .tabSelected{color:#fefefe; background:#999; padding-bottom:1px;}
  .tabSelected, .tabSelected:hover {
  color: #111;
@@ -823,6 +819,9 @@ h1 {font-size:18px;}
 h2 {font-size:16px;}
 h3 {font-size: 14px;}
 /*}}}*/</pre>
+</div>
+<div title="SystemSettings" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310120955" changecount="1">
+<pre>txtTheme: BlackicityTheme</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
