@@ -831,9 +831,9 @@ body {
 .tagging .button:active, .tagged .button:active, .tagging:active .tiddlyLinkExisting:active, .tagging .tiddlyLinkNonExisting:active {
     [[MineralTheme##StyleWhiteActive]]
 }
-.tagged li, .tagging li  {
+.tagged li, .tagging li {
     margin-bottom: 6px;
-    margin-top: 2px;
+    margin-top: 6px;
 }
 .popup {
     [[MineralTheme##StyleGrey]]
@@ -867,6 +867,15 @@ body {
 }
 #messageArea a, #messageArea a:hover {
     color:[[ColorPalette::SecondaryMid]];
+}
+.messageToolbar__icon {
+    fill: [[ColorPalette::TertiaryLight]];
+}
+.messageToolbar__icon:hover {
+    fill: [[ColorPalette::TertiaryPale]];
+}
+#messageArea .button, #messageArea .button:hover {
+    background: transparent;
 }
 [[StyleSheet]]
 /*}}}*/
