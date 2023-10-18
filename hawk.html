@@ -626,19 +626,21 @@ Also see AdvancedOptions
 </div>
 <div title="StyleSheet" modifier="Yakov Litvin" created="200709061216" modified="202310181540" tags="HawkTheme">
 <pre>/*{{{*/
+body {
+	background:#fff url(hawk_bg_top.png) repeat-x top left;
+}
+
 #backstagePanel {
 	width: unset;
 	margin:0em 3em;
 }
 
-body { text-align:center; background:#fff url(hawk_bg_top.png) repeat-x top left; }
-
 #contentWrapper { width:750px; text-align:left; margin-left:auto; margin-right:auto; position:relative; overflow:hidden; clear:both; }
 
-div.header { display:block; height:80px; background-color:[[ColorPalette::Foreground]]; overflow:hidden; clear:both; position:relative; }
-div.header div.headerForeground { padding-top:2em; }
-div.header div.headerForeground span.siteTitle h1 { position:absolute; margin:0; padding:0; top:10px; left:8px;}
-div.header div.headerShadow { display:none; }
+.header { display:block; height:80px; background:[[ColorPalette::Foreground]]; overflow:hidden; clear:both; position:relative; }
+.headerForeground { padding-top:2em; }
+.headerForeground span.siteTitle h1 { position:absolute; margin:0; padding:0; top:10px; left:8px;}
+.headerShadow { display:none; }
 
 #topMenu ul { margin:0; padding:0; list-style:none; width:100%; overflow:hidden; clear:both; }
 #topMenu ul li { float:left; margin:0; padding:0; }
