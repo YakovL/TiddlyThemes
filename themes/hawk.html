@@ -627,8 +627,7 @@ Installation notes:
 !ViewTemplate
 &lt;!--{{{--&gt;
 &lt;div class='title' macro='view title'&gt;&lt;/div&gt;
-&lt;div class='toolbar' macro='toolbar closeTiddler
-+editTiddler'&gt;&lt;/div&gt;
+&lt;div class='toolbar' macro='toolbar [[ToolbarCommands::ViewToolbar]]'&gt;&lt;/div&gt;
 &lt;div class='subtitle'&gt;&lt;span macro='view modifier
 link'&gt;&lt;/span&gt;, &lt;span macro='view modified
 date'&gt;&lt;/span&gt; (&lt;span macro='message
@@ -643,7 +642,7 @@ created date'&gt;&lt;/span&gt;)&lt;/div&gt;
 !EditTemplate
 &lt;!--{{{--&gt;
 &lt;div class='title' macro='view title'&gt;&lt;/div&gt;
-&lt;div class='toolbar' macro='toolbar +saveTiddler -cancelTiddler deleteTiddler'&gt;&lt;/div&gt;
+&lt;div class='toolbar' macro='toolbar [[ToolbarCommands::EditToolbar]]'&gt;&lt;/div&gt;
 &lt;div class='editor' macro='edit title'&gt;&lt;/div&gt;
 &lt;div macro='annotations'&gt;&lt;/div&gt;
 &lt;div class='editor' macro='edit text'&gt;&lt;/div&gt;
