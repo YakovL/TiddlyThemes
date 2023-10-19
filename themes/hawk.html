@@ -581,16 +581,6 @@ SubtleSuperLight: #eee</pre>
 <pre>[[GettingStarted]]
 [[LorumIpsum]]</pre>
 </div>
-<div title="EditTemplate" modifier="TiddlyThemes" created="200709061156" modified="200709061231" tags="HawkTheme">
-<pre>&lt;!--{{{--&gt;
-&lt;div class='title' macro='view title'&gt;&lt;/div&gt;
-&lt;div class='toolbar' macro='toolbar +saveTiddler -cancelTiddler deleteTiddler'&gt;&lt;/div&gt;
-&lt;div class='editor' macro='edit title'&gt;&lt;/div&gt;
-&lt;div macro='annotations'&gt;&lt;/div&gt;
-&lt;div class='editor' macro='edit text'&gt;&lt;/div&gt;
-&lt;div class='editor' macro='edit tags'&gt;&lt;/div&gt;&lt;div class='editorFooter'&gt;&lt;span macro='message views.editor.tagPrompt'&gt;&lt;/span&gt;&lt;span macro='tagChooser'&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;!--}}}--&gt;</pre>
-</div>
 <div title="Footer" modifier="Saq" created="200709061157" modified="200709061236" tags="HawkTheme">
 <pre>[[Copyright]]
 
@@ -598,46 +588,23 @@ SubtleSuperLight: #eee</pre>
 
 &lt;&lt;slider chkSliderOptionsPanel OptionsPanel &quot;options »&quot; &quot;Change TiddlyWiki advanced options&quot;&gt;&gt;</pre>
 </div>
-<div title="LorumIpsum" modifier="Saq" created="200709061232" modified="200709061234" tags="Tag1 Tag2 Tag3">
-<pre>Aenean eros arcu, condimentum nec, dapibus ut, tincidunt sit amet, urna. Quisque viverra, eros sed imperdiet iaculis, est risus facilisis quam, id malesuada arcu nulla luctus urna. Nullam et est. Vestibulum velit sem, faucibus cursus, dapibus vestibulum, pellentesque et, urna. Donec luctus. Donec lectus. Aliquam eget eros facilisis tortor feugiat sollicitudin. Integer lobortis vulputate sapien. Sed iaculis erat ac nunc. Etiam eu enim. Mauris ipsum urna, rhoncus at, bibendum sit amet, euismod eget, dolor. Mauris fermentum quam vitae ligula. Vestibulum in libero feugiat justo dictum consectetuer. Vestibulum euismod purus eget elit. Nunc sed massa porta elit bibendum posuere. Nunc pulvinar justo sit amet odio. In sed est. Phasellus ornare elementum nulla. Nulla ipsum neque, cursus a, viverra a, imperdiet at, enim. Quisque facilisis, diam sed accumsan suscipit, odio arcu hendrerit dolor, quis aliquet massa nulla nec sem.
-!heading 1
-!!heading 2
-!!!heading3
-----
-&lt;&lt;tag button&gt;&gt;
-This is a link to a [[StyleSheet]] tiddler.
+<div title="HawkTheme" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310190654" modified="202310190733" changecount="15">
+<pre>|Name         |HawkTheme|
+|Description  |A ~TiddlyWiki pinky hawk theme|
+|Version      |1.1|
+|Author       |?, Yakov Litvin|
+|Source       |https://yakovl.github.io/TiddlyThemes/themes/hawk.html#HawkTheme|
+|~PageTemplate|##PageTemplate|
+|~ViewTemplate|##ViewTemplate|
+|~EditTemplate|##EditTemplate|
+|~StyleSheet|##StyleSheet|
 
-&gt; This is a blockquote
-&gt; This is a blockquote
-&gt; This is a blockquote</pre>
-</div>
-<div title="MainMenu" modifier="TiddlyThemes" created="200709061217" modified="200709061231" tags="HawkTheme">
-<pre>* PageTemplate
-* StyleSheet
-* ColorPalette
-* ViewTemplate
-* EditTemplate
+Installation notes:
+* ColorPalette is not packed into the theme yet (add it manually)
+* see also TopMenu, MainMenu, [[Footer]], OptionsPanel, adjusted on the demo page
 
-
-
-&lt;&lt;search&gt;&gt;
-
-
-</pre>
-</div>
-<div title="OptionsPanel" modifier="TiddlyThemes" created="200709061157" modified="200709061231" tags="HawkTheme">
-<pre>These interface options for customising TiddlyWiki are saved in your browser
-
-&lt;&lt;option chkRegExpSearch&gt;&gt; RegExpSearch
-&lt;&lt;option chkCaseSensitiveSearch&gt;&gt; CaseSensitiveSearch
-&lt;&lt;option chkAnimate&gt;&gt; EnableAnimations
-
-Also see AdvancedOptions
-</pre>
-</div>
-<div title="PageTemplate" modifier="TiddlyThemes" created="200709061154" modified="200709061231" tags="HawkTheme">
-<pre>&lt;!--{{{--&gt;
-	
+!PageTemplate
+&lt;!--{{{--&gt;
   &lt;div class='header'&gt;
       &lt;div class='headerShadow'&gt;
         &lt;span class='siteTitle' refresh='content' tiddler='SiteTitle'&gt;&lt;/span&gt;&amp;nbsp;
@@ -655,11 +622,36 @@ Also see AdvancedOptions
     &lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;div id='footer' refresh='content' force='true' tiddler='Footer'&gt;&lt;/div&gt;
+&lt;!--}}}--&gt;
 
-&lt;!--}}}--&gt;</pre>
-</div>
-<div title="StyleSheet" modifier="Yakov Litvin" created="200709061216" modified="202310181540" tags="HawkTheme">
-<pre>/*{{{*/
+!ViewTemplate
+&lt;!--{{{--&gt;
+&lt;div class='title' macro='view title'&gt;&lt;/div&gt;
+&lt;div class='toolbar' macro='toolbar closeTiddler
++editTiddler'&gt;&lt;/div&gt;
+&lt;div class='subtitle'&gt;&lt;span macro='view modifier
+link'&gt;&lt;/span&gt;, &lt;span macro='view modified
+date'&gt;&lt;/span&gt; (&lt;span macro='message
+views.wikified.createdPrompt'&gt;&lt;/span&gt; &lt;span macro='view
+created date'&gt;&lt;/span&gt;)&lt;/div&gt;
+&lt;div class='tagging' macro='tagging'&gt;&lt;/div&gt;
+&lt;div class='tagged' macro='tags'&gt;&lt;/div&gt;
+&lt;div class='viewer' macro='view text wikified'&gt;&lt;/div&gt;
+&lt;div class='tagClear'&gt;&lt;/div&gt;
+&lt;!--}}}--&gt;
+
+!EditTemplate
+&lt;!--{{{--&gt;
+&lt;div class='title' macro='view title'&gt;&lt;/div&gt;
+&lt;div class='toolbar' macro='toolbar +saveTiddler -cancelTiddler deleteTiddler'&gt;&lt;/div&gt;
+&lt;div class='editor' macro='edit title'&gt;&lt;/div&gt;
+&lt;div macro='annotations'&gt;&lt;/div&gt;
+&lt;div class='editor' macro='edit text'&gt;&lt;/div&gt;
+&lt;div class='editor' macro='edit tags'&gt;&lt;/div&gt;&lt;div class='editorFooter'&gt;&lt;span macro='message views.editor.tagPrompt'&gt;&lt;/span&gt;&lt;span macro='tagChooser'&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!--}}}--&gt;
+
+!StyleSheet
+/*{{{*/
 body {
 	background:#fff url(hawk_bg_top.png) repeat-x top left;
 }
@@ -735,28 +727,49 @@ h1, h2, h3, h4, h5 { color:[[ColorPalette::MainAccentLight]] }
 
 /*}}}*/</pre>
 </div>
-<div title="TopMenu" modifier="TiddlyThemes" created="200709061215" modified="200709061231" tags="HawkTheme">
+<div title="LorumIpsum" modifier="Saq" created="200709061232" modified="200709061234" tags="Tag1 Tag2 Tag3">
+<pre>Aenean eros arcu, condimentum nec, dapibus ut, tincidunt sit amet, urna. Quisque viverra, eros sed imperdiet iaculis, est risus facilisis quam, id malesuada arcu nulla luctus urna. Nullam et est. Vestibulum velit sem, faucibus cursus, dapibus vestibulum, pellentesque et, urna. Donec luctus. Donec lectus. Aliquam eget eros facilisis tortor feugiat sollicitudin. Integer lobortis vulputate sapien. Sed iaculis erat ac nunc. Etiam eu enim. Mauris ipsum urna, rhoncus at, bibendum sit amet, euismod eget, dolor. Mauris fermentum quam vitae ligula. Vestibulum in libero feugiat justo dictum consectetuer. Vestibulum euismod purus eget elit. Nunc sed massa porta elit bibendum posuere. Nunc pulvinar justo sit amet odio. In sed est. Phasellus ornare elementum nulla. Nulla ipsum neque, cursus a, viverra a, imperdiet at, enim. Quisque facilisis, diam sed accumsan suscipit, odio arcu hendrerit dolor, quis aliquet massa nulla nec sem.
+!heading 1
+!!heading 2
+!!!heading3
+----
+&lt;&lt;tag button&gt;&gt;
+This is a link to a [[StyleSheet]] tiddler.
+
+&gt; This is a blockquote
+&gt; This is a blockquote
+&gt; This is a blockquote</pre>
+</div>
+<div title="MainMenu" modifier="Yakov Litvin" created="200709061217" modified="202310190705" tags="HawkTheme" changecount="4">
+<pre>* HawkTheme
+* ColorPalette
+
+
+
+&lt;&lt;search&gt;&gt;
+
+
+</pre>
+</div>
+<div title="OptionsPanel" modifier="Yakov Litvin" created="200709061157" modified="202310190646" tags="HawkTheme" changecount="2">
+<pre>These interface options for customising ~TiddlyWiki are saved in your browser
+
+&lt;&lt;option chkRegExpSearch&gt;&gt; Regular Expression Search
+&lt;&lt;option chkCaseSensitiveSearch&gt;&gt; Case Sensitive Search
+&lt;&lt;option chkAnimate&gt;&gt; Enable Animations
+
+Also see AdvancedOptions
+</pre>
+</div>
+<div title="SystemSettings" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310190648" changecount="1">
+<pre>txtTheme: HawkTheme</pre>
+</div>
+<div title="TopMenu" modifier="Yakov Litvin" created="200709061215" modified="202310190726" tags="HawkTheme" changecount="2">
 <pre>* [[TopMenu]]
 * [[MainMenu]]
 * [[DefaultTiddlers]]
 * [[Footer]]
 &lt;&lt;closeAll&gt;&gt;&lt;&lt;permaview&gt;&gt;&lt;&lt;newTiddler&gt;&gt;&lt;&lt;saveChanges&gt;&gt;</pre>
-</div>
-<div title="ViewTemplate" modifier="TiddlyThemes" created="200709061215" modified="200709061231" tags="HawkTheme">
-<pre>&lt;!--{{{--&gt;
-&lt;div class='title' macro='view title'&gt;&lt;/div&gt;
-&lt;div class='toolbar' macro='toolbar closeTiddler
-+editTiddler'&gt;&lt;/div&gt;
-&lt;div class='subtitle'&gt;&lt;span macro='view modifier
-link'&gt;&lt;/span&gt;, &lt;span macro='view modified
-date'&gt;&lt;/span&gt; (&lt;span macro='message
-views.wikified.createdPrompt'&gt;&lt;/span&gt; &lt;span macro='view
-created date'&gt;&lt;/span&gt;)&lt;/div&gt;
-&lt;div class='tagging' macro='tagging'&gt;&lt;/div&gt;
-&lt;div class='tagged' macro='tags'&gt;&lt;/div&gt;
-&lt;div class='viewer' macro='view text wikified'&gt;&lt;/div&gt;
-&lt;div class='tagClear'&gt;&lt;/div&gt;
-&lt;!--}}}--&gt;</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
