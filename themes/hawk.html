@@ -588,7 +588,7 @@ SubtleSuperLight: #eee</pre>
 
 &lt;&lt;slider chkSliderOptionsPanel OptionsPanel &quot;options »&quot; &quot;Change TiddlyWiki advanced options&quot;&gt;&gt;</pre>
 </div>
-<div title="HawkTheme" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310190654" modified="202310190733" changecount="15">
+<div title="HawkTheme" creator="Yakov Litvin" modifier="Yakov Litvin" created="202310190654" modified="202310190852" changecount="33">
 <pre>|Name         |HawkTheme|
 |Description  |A ~TiddlyWiki pinky hawk theme|
 |Version      |1.1|
@@ -602,6 +602,19 @@ SubtleSuperLight: #eee</pre>
 Installation notes:
 * ColorPalette is not packed into the theme yet (add it manually)
 * see also TopMenu, MainMenu, [[Footer]], OptionsPanel, adjusted on the demo page
+Todos:
+* pack ColorPalette into the theme as well (requires either changes like {{{[[ColorPalette::Foreground]]}}} → {{{[[HawkTheme::Foreground]]}}} or may be fixing something in the TW core)
+* check if we can avoid modifying ViewTemplate, EditTemplate (use CSS instead)
+* fix usability:
+** add [[StyleSheet]] inclusion into CSS section (and make sure it will cause refresh on edit!)
+** move tid toolbars to the right, increase font size
+** shadow tiddlers should differ visually (if not italics in titles, then something else)
+** backstage: fonts are too small!
+* fix alignment of the search button/inbox
+* get rid of the bg image hack (not flexible, opening backstage breaks it)
+* ensure responsiveness
+* review colors: at least messageArea and code don't look like a fit
+* lint the StyleSheet
 
 !PageTemplate
 &lt;!--{{{--&gt;
@@ -627,12 +640,10 @@ Installation notes:
 !ViewTemplate
 &lt;!--{{{--&gt;
 &lt;div class='title' macro='view title'&gt;&lt;/div&gt;
-&lt;div class='toolbar' macro='toolbar [[ToolbarCommands::ViewToolbar]]'&gt;&lt;/div&gt;
-&lt;div class='subtitle'&gt;&lt;span macro='view modifier
-link'&gt;&lt;/span&gt;, &lt;span macro='view modified
-date'&gt;&lt;/span&gt; (&lt;span macro='message
-views.wikified.createdPrompt'&gt;&lt;/span&gt; &lt;span macro='view
-created date'&gt;&lt;/span&gt;)&lt;/div&gt;
+&lt;div class='toolbar' role='navigation' macro='toolbar [[ToolbarCommands::ViewToolbar]]'&gt;&lt;/div&gt;
+&lt;div class='subtitle'&gt;
+  &lt;span macro='view modifier link'&gt;&lt;/span&gt;, &lt;span macro='view modified date'&gt;&lt;/span&gt; (&lt;span macro='message views.wikified.createdPrompt'&gt;&lt;/span&gt; &lt;span macro='view created date'&gt;&lt;/span&gt;)
+&lt;/div&gt;
 &lt;div class='tagging' macro='tagging'&gt;&lt;/div&gt;
 &lt;div class='tagged' macro='tags'&gt;&lt;/div&gt;
 &lt;div class='viewer' macro='view text wikified'&gt;&lt;/div&gt;
@@ -646,7 +657,10 @@ created date'&gt;&lt;/span&gt;)&lt;/div&gt;
 &lt;div class='editor' macro='edit title'&gt;&lt;/div&gt;
 &lt;div macro='annotations'&gt;&lt;/div&gt;
 &lt;div class='editor' macro='edit text'&gt;&lt;/div&gt;
-&lt;div class='editor' macro='edit tags'&gt;&lt;/div&gt;&lt;div class='editorFooter'&gt;&lt;span macro='message views.editor.tagPrompt'&gt;&lt;/span&gt;&lt;span macro='tagChooser'&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class='editor' macro='edit tags'&gt;&lt;/div&gt;
+&lt;div class='editorFooter'&gt;
+  &lt;span macro='message views.editor.tagPrompt'&gt;&lt;/span&gt;&lt;span macro='tagChooser excludeLists'&gt;&lt;/span&gt;
+&lt;/div&gt;
 &lt;!--}}}--&gt;
 
 !StyleSheet
