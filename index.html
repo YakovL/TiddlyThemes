@@ -673,7 +673,8 @@ The installation process may differ from theme to theme.
 </div>
 <div title="MainMenu" creator="BijL" modifier="BijL" created="201301171014">
 <pre>!!~TiddlyThemes
-&lt;&lt;list filter [tag[menu]]&gt;&gt;</pre>
+{{mainMenu__indexList{
+&lt;&lt;list filter [tag[menu]]&gt;&gt;}}}</pre>
 </div>
 <div title="MineralTheme" creator="BijL" modifier="Yakov Litvin" created="201301170937" modified="202310192101" tags="menu">
 <pre>[[mineraltheme.html|./themes/mineraltheme.html]]
@@ -702,17 +703,15 @@ The installation process may differ from theme to theme.
 
 [img[rin.png][./rin.html]]</pre>
 </div>
-<div title="SinglePageModePlugin" creator="BijL" modifier="BijL" created="201301171013" modified="201301171402" tags="systemConfig NavigationPackage" changecount="2">
+<div title="SinglePageModePlugin" creator="BijL" modifier="Yakov Litvin" created="201301171013" modified="202310221107" tags="systemConfig NavigationPackage" changecount="2">
 <pre>/***
-|Name|SinglePageModePlugin|
-|Source|http://www.TiddlyTools.com/#SinglePageModePlugin|
-|Documentation|http://www.TiddlyTools.com/#SinglePageModePluginInfo|
-|Version|2.9.7|
-|Author|Eric Shulman|
-|License|http://www.TiddlyTools.com/#LegalStatements|
-|~CoreVersion|2.1|
-|Type|plugin|
-|Description|Show tiddlers one at a time with automatic permalink, or always open tiddlers at top/bottom of page.|
+|Name         |SinglePageModePlugin|
+|Description  |Show tiddlers one at a time with automatic permalink, or always open tiddlers at top/bottom of page.|
+|Documentation|https://TiddlyTools.com/Classic/#SinglePageModePluginInfo|
+|Source       |https://TiddlyTools.com/Classic/#SinglePageModePlugin|
+|Version      |2.9.7|
+|Author       |Eric Shulman|
+|License      |https://TiddlyTools.com/Classic/#LegalStatements|
 This plugin allows you to configure TiddlyWiki to navigate more like a traditional multipage web site with only one tiddler displayed at a time.
 !!!!!Documentation
 &gt;see [[SinglePageModePluginInfo]]
@@ -876,9 +875,24 @@ Story.prototype.displayTiddlers = function() {
 }
 
 #mainMenu {
-    text-align: left;
     bottom: 0;
+}
+
+.mainMenu__indexList {
+    position: absolute;
+    bottom: 15px;
+	/* dirty, should account the header size instead */
+    top: 100px;
     overflow: auto;
+}
+
+.mainMenu__indexList ul {
+	padding-inline-start: 0;
+	margin: 0;
+}
+
+.mainMenu__indexList li {
+	list-style: none;
 }
 
 #mainMenu h2 {
@@ -908,13 +922,13 @@ Story.prototype.displayTiddlers = function() {
 
 [img[tiddlysinister.png][./tiddlysinister.html]]</pre>
 </div>
-<div title="TotallyTiddlers" creator="BijL" modifier="BijL" created="201301171012" modified="201301302107" tags="systemTheme CSS ThemePackage" changecount="2">
+<div title="TotallyTiddlers" creator="BijL" modifier="Yakov Litvin" created="201301171012" modified="202310221107" tags="systemTheme CSS ThemePackage" changecount="2">
 <pre>/***
-|Name|TotallyTiddlers|
-|Source|http://www.TiddlyTools.com/#TotallyTiddlers|
-|Version||
-|Author|Eric Shulman|
-|License|http://www.TiddlyTools.com/#LegalStatements|
+|Name   |TotallyTiddlers|
+|Source |https://TiddlyTools.com/Classic/#TotallyTiddlers|
+|Version|?, modified by Yakov Litvin|
+|Author |Eric Shulman|
+|License|https://TiddlyTools.com/Classic/#LegalStatements|
 |~CoreVersion|2.1|
 |Type|CSS|
 |Description|theme: hide everything but tiddler content|
@@ -922,7 +936,7 @@ Story.prototype.displayTiddlers = function() {
 |PageTemplateReadOnly|PageTemplateReadOnly|
 |EditTemplateReadOnly|EditTemplateReadOnly|
 |Check|TotallyTiddlers##XXXcheck|
-|Init|TotallyTiddlers##XXXinit|
+|Init |TotallyTiddlers##XXXinit|
 |Reset|TotallyTiddlers##XXXreset|
 !!!!!check
 //{{{
@@ -946,25 +960,24 @@ displayMessage(&quot;TotallyTiddlers (kiosk mode) is OFF&quot;);
     display: none;
 }
 #mainMenu {
-    width: 300px;
     font-size: 1.2em;
     left: 0;
     top: 0;
     line-height: 2em;
-    padding: 1.5em 0.5em 0.5em;
+    padding: 1.5em 0.5em 0.5em 1em;
     position: absolute;
     text-align: left;
 }
 #displayArea {
     padding-top: 30px;
-    margin-left: 320px;
 }
 body {
-          font-size: 1.0em;
-          margin-bottom: 4em;
+    font-size: 1.0em;
+    margin-bottom: 4em;
 }
 #contentWrapper {
-    margin-left: 320px;
+    /* dirty, should account the width of MainMenu instead (use flex) */
+    margin-left: 220px;
 }
 body { background-color:transparent !important; }
 #sidebar, .toolbar, .tagged, .tagging, .subtitle, .siteTitle, #headerArea
