@@ -602,7 +602,15 @@ More ideas shamesslessly begged, borrowed or stolen from..... Simon Baird, Clint
 #sidebarOptions a {;border: none;}
 #sidebarOptions .sliderPanel a {border: none;color: #00005a;}
 #displayArea {background: #fff;margin: 1em 15.7em 0em 1em;border-left: solid 2px #8895bb;}
-.viewer {line-height: 1.4em;padding-bottom: 1em;border-bottom:solid 1px #dedede;}
+.viewer {
+	line-height: 1.4em;
+	padding-bottom: 1em;
+	border-bottom:solid 1px #dedede;
+}
+.tiddler:last-child .viewer {
+    padding-bottom: 0;
+    border-bottom: none;
+}
 .viewer th, thead td {background: #00009d;border: 1px solid #666;color: #fff;}
 .title {color: #000}
 h1,h2,h3,h4,h5 {color: #fff;background: #00009d;}
