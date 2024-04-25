@@ -588,13 +588,15 @@ More ideas shamesslessly begged, borrowed or stolen from..... Simon Baird, Clint
 &lt;&lt;saveChanges&gt;&gt;
 &lt;&lt;importTiddlers link&gt;&gt;</pre>
 </div>
-<div title="StyleSheet" modifier="TiddlyThemes" created="200701230833" modified="200708091512" tags="Blueberry2Theme">
+<div title="StyleSheet" modifier="TiddlyThemes" created="200701230833" modified="202404251930" tags="Blueberry2Theme">
 <pre>&lt;!---
 [[Blueberry 2|StyleSheet]] with ideas shamesslessly taken from (and suggested by) Simon Baird, Clint Checketts and Christine Hodges
 ---&gt;
 
 /*{{{*/
-.headerForeground { display: none;}
+.hack {}
+body { background: #97a8d2; }
+
 #sidebar {width: 171px; background: #e7ecee;border-left: solid 2px #8895bb;border-top: solid 2px #97a8d2;}
 #sidebarTabs .tabContents {width: 158px; font-weight: bold; color: #333 ;}
 #sidebarTabs .tabSelected, #sidebarTabs .tabContents {background: #dce1e3;}
@@ -602,6 +604,7 @@ More ideas shamesslessly begged, borrowed or stolen from..... Simon Baird, Clint
 #sidebarOptions .sliderPanel { background: inherit; }
 #sidebarOptions a { border: none; }
 #sidebarOptions .sliderPanel a {border: none;color: #00005a;}
+
 #displayArea {background: #fff;margin: 1em 15.7em 0em 1em;border-left: solid 2px #8895bb;}
 .viewer {
 	line-height: 1.4em;
@@ -618,7 +621,6 @@ h1,h2,h3,h4,h5 {color: #fff;background: #00009d;}
 a { color: #00005a; }
 a:hover, .selected .toolbar a:hover { background: #00009d; color: #fff;}
 .externalLink {	text-decoration: underline; color: #000083;}
-body {	background: #97a8d2;}
 .tagging .button, .tagged .button { border: 1px solid transparent; }
 .button:hover {color: #fff;background: #00009d; border: 1px solid #dedede;}
 
