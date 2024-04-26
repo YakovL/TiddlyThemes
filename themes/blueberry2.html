@@ -557,11 +557,13 @@ body {font-size:0.8em;}
 <div title="Blueberry2Theme" modifier="Yakov Litvin" created="202404261337" modified="202404261337" tags="Blueberry2Theme">
 <pre>|Name         |Blueberry2Theme|
 |Description  |A ~TiddlyWiki Blueberry-colors theme|
-|Version      |1.0|
+|Version      |1.0.1|
 |Author       |? (Various ideas were shamesslessly taken from and suggested by Simon Baird, Clint Checketts and Christine Hodges); Yakov Litvin (adoption to TW 2.10.1, various updates, packing into an actual theme)|
 |Source       |https://yakovl.github.io/TiddlyThemes/themes/blackicity.html#Blueberry2Theme|
 |~PageTemplate|##PageTemplate|
 |~StyleSheet  |##StyleSheet|
+Notes:
+* Headers and links in headers should be improved (better paddings, contrast, hover colors, etc.), may require introducing extra colors
 
 !PageTemplate
 &lt;!--{{{--&gt;
@@ -605,6 +607,7 @@ body { background: #97a8d2; }
 .viewer th, thead td {background: #00009d;border: 1px solid #666;color: #fff;}
 .title { color: #000 }
 h1,h2,h3,h4,h5 {color: #fff;background: #00009d;}
+h1 a, h2 a, h3 a, h4 a, h5 a { color: #97a8d2; }
 a { color: #00005a; }
 a:hover, .selected .toolbar a:hover { background: #00009d; color: #fff;}
 .externalLink {	text-decoration: underline; color: #000083;}
