@@ -554,10 +554,16 @@ body {font-size:0.8em;}
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
-<div title="PageTemplate" modifier="TiddlyThemes" created="200701230833" modified="200708091512" tags="Blueberry2Theme">
-<pre>&lt;!---
-More ideas shamesslessly begged, borrowed or stolen from..... Simon Baird, Clint Checketts and Christine Hodges :))
----&gt;
+<div title="Blueberry2Theme" modifier="Yakov Litvin" created="202404261337" modified="202404261337" tags="Blueberry2Theme">
+<pre>|Name         |Blueberry2Theme|
+|Description  |A ~TiddlyWiki Blueberry-colors theme|
+|Version      |1.0|
+|Author       |? (Various ideas were shamesslessly taken from and suggested by Simon Baird, Clint Checketts and Christine Hodges); Yakov Litvin (adoption to TW 2.10.1, various updates, packing into an actual theme)|
+|Source       |https://yakovl.github.io/TiddlyThemes/themes/blackicity.html#Blueberry2Theme|
+|~PageTemplate|##PageTemplate|
+|~StyleSheet  |##StyleSheet|
+
+!PageTemplate
 &lt;!--{{{--&gt;
 &lt;div class='header' macro=&quot;gradient vert #00005a #0000ad&quot;&gt;
     &lt;div id='topMenu'&gt;
@@ -574,25 +580,7 @@ More ideas shamesslessly begged, borrowed or stolen from..... Simon Baird, Clint
 	&lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;!--}}}--&gt;
-</pre>
-</div>
-<div title="SideBarOptions" modifier="TiddlyThemes" created="200701230824" modified="200708091512" tags="Blueberry2Theme">
-<pre>&lt;&lt;search&gt;&gt;
-&lt;&lt;slider chkSliderToolsPanel SidebarTools 'Tools' 'New tiddler, save changes etc..'&gt;&gt;&lt;&lt;slider chkSliderOptionsPanel OptionsPanel 'Options' 'Change TiddlyWiki advanced options'&gt;&gt;</pre>
-</div>
-<div title="SidebarTools" modifier="TiddlyThemes" created="200701230825" modified="200708091512" tags="Blueberry2Theme">
-<pre>&lt;&lt;closeAll&gt;&gt;
-&lt;&lt;permaview&gt;&gt;
-&lt;&lt;newTiddler&gt;&gt;
-&lt;&lt;newJournal 'DD MMM YYYY'&gt;&gt;
-&lt;&lt;saveChanges&gt;&gt;
-&lt;&lt;importTiddlers link&gt;&gt;</pre>
-</div>
-<div title="StyleSheet" modifier="TiddlyThemes" created="200701230833" modified="202404251930" tags="Blueberry2Theme">
-<pre>&lt;!---
-[[Blueberry 2|StyleSheet]] with ideas shamesslessly taken from (and suggested by) Simon Baird, Clint Checketts and Christine Hodges
----&gt;
-
+!StyleSheet
 /*{{{*/
 .hack {}
 body { background: #97a8d2; }
@@ -612,8 +600,8 @@ body { background: #97a8d2; }
 	border-bottom:solid 1px #dedede;
 }
 .tiddler:last-child .viewer {
-    padding-bottom: 0;
-    border-bottom: none;
+	padding-bottom: 0;
+	border-bottom: none;
 }
 .viewer th, thead td {background: #00009d;border: 1px solid #666;color: #fff;}
 .title { color: #000 }
@@ -639,7 +627,7 @@ a:hover, .selected .toolbar a:hover { background: #00009d; color: #fff;}
 	background: transparent;
 	border: solid 1px transparent;
 	border-right: solid 1px #fff;
-        padding: 5px 15px 6px 15px;
+		padding: 5px 15px 6px 15px;
 }
 #topMenu a:hover {
 	background: #00009d;
@@ -648,6 +636,21 @@ a:hover, .selected .toolbar a:hover { background: #00009d; color: #fff;}
 #topMenu br {display: none; padding-right: 1em;}
 #topMenu span .tiddlyLinkNonExisting {font-style:normal;}
 /*}}}*/</pre>
+</div>
+<div title="SideBarOptions" modifier="TiddlyThemes" created="200701230824" modified="200708091512" tags="Blueberry2Theme">
+<pre>&lt;&lt;search&gt;&gt;
+&lt;&lt;slider chkSliderToolsPanel SidebarTools 'Tools' 'New tiddler, save changes etc..'&gt;&gt;&lt;&lt;slider chkSliderOptionsPanel OptionsPanel 'Options' 'Change TiddlyWiki advanced options'&gt;&gt;</pre>
+</div>
+<div title="SidebarTools" modifier="TiddlyThemes" created="200701230825" modified="200708091512" tags="Blueberry2Theme">
+<pre>&lt;&lt;closeAll&gt;&gt;
+&lt;&lt;permaview&gt;&gt;
+&lt;&lt;newTiddler&gt;&gt;
+&lt;&lt;newJournal 'DD MMM YYYY'&gt;&gt;
+&lt;&lt;saveChanges&gt;&gt;
+&lt;&lt;importTiddlers link&gt;&gt;</pre>
+</div>
+<div title="SystemSettings" modifier="Yakov Litvin" created="202404261337" modified="202404261337">
+<pre>txtTheme: Blueberry2Theme</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
