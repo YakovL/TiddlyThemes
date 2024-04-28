@@ -513,8 +513,22 @@ Also see [[AdvancedOptions]]</pre>
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
-<div title="PageTemplate" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="MonochromeTheme" server.type="file" server.host="http://tiddlythemes.com/empties/Monochrome.html" server.page.revision="200708091512">
-<pre>&lt;div id='header' class='header' macro='gradient vert   #555555       #3b3b3b '&gt;
+<div title="SystemSettings" modifier="Yakov Litvin" created="202404281543" modified="202404281543">
+<pre>txtTheme: MonochromeTheme
+</pre>
+</div>
+<div title="MonochromeTheme" modifier="Yakov Litvin" created="202404281543" modified="202404281543">
+<pre>/***
+|Description  |Monochrome Theme for ~TiddlyWiki|
+|Author       |Design and CSS by Saq Imtiaz; packing into a theme by Yakov Litvin|
+|Version      |1.0|
+|Source       |https://yakovl.github.io/TiddlyThemes/themes/monochromel#MonochromeTheme|
+|~PageTemplate|##PageTemplate|
+|~StyleSheet|##StyleSheet|
+***/
+!PageTemplate
+&lt;!--{{{--&gt;
+&lt;div id='header' class='header' macro='gradient vert #555555 #3b3b3b'&gt;
         &lt;div class='siteTitle' refresh='content' tiddler='SiteTitle'&gt;&lt;/div&gt;
         &lt;span id='topMenu' refresh='content' tiddler='MainMenu'&gt;&lt;/span&gt;
 &lt;/div&gt;
@@ -527,16 +541,10 @@ Also see [[AdvancedOptions]]</pre>
 &lt;div id='messageArea'&gt;&lt;/div&gt;
 &lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!--}}}--&gt;</pre>
-</div>
-<div title="StyleSheet" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="MonochromeTheme" server.type="file" server.host="http://tiddlythemes.com/empties/Monochrome.html" server.page.revision="200708091512">
-<pre>/*{{{*/
-/*Monochrome Theme for TiddlyWiki*/
-/*Design and CSS by Saq Imtiaz*/
-/*Version 1.0*/
-/*}}}*/
-/*{{{*/
+&lt;!--}}}--&gt;
 
+!StyleSheet
+/*{{{*/
 body {background:#3B3B3B; color:#C3C3C3; font:12px Verdana, Helvetica, sans-serif;
 	}
 
@@ -760,7 +768,8 @@ border: 1px solid #ccc;
 h1,h2,h3,h4,h5 { color: 		#9c9c9c; background: transparent; padding-bottom:2px; font-family: Arial, Helvetica, sans-serif; }
 h1 {font-size:18px;}
 h2 {font-size:16px;}
-h3 {font-size: 14px;}</pre>
+h3 {font-size: 14px;}
+/*}}}*/</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
