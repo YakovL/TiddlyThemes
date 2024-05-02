@@ -615,22 +615,25 @@ color: #ccc; margin-right:2em;margin-left:0.5em;
 
 #displayArea {margin-left:1.35em; margin-right:17.65em; margin-top:0.5em; padding-top:1em; padding-bottom:10px;}
 
-.tiddler {background:#454545; margin-bottom:20px; padding:1em 2em 1em 2em;}
+.tiddler {
+	background:#454545; margin-bottom:20px; padding:1em 2em 1em 2em;}
 
-a, a:hover{
+a, a:hover {
 color:#fff;
 text-decoration: none; background:transparent;
 }
 
-.viewer a, .viewer a:hover{border-bottom:1px dotted #fff; font-weight:normal;}
+.viewer a, .viewer a:hover {
+	border-bottom:1px dotted #fff; font-weight:normal;}
 
-.viewer .button, .editorFooter .button{
+.viewer .button, .editorFooter .button {
 color: #fff;
 border: 1px solid #fff;
 }
 
-.viewer .button:hover,
-.editorFooter .button:hover, .viewer .button:active, .viewer .highlight,.editorFooter .button:active, .editorFooter .highlight{
+.viewer .button:hover, .editorFooter .button:hover,
+.viewer .button:active, .editorFooter .button:active,
+.viewer .highlight, .editorFooter .highlight {
 color: #fff;
 background: #3B3B3B;
 border-color: #3B3B3B;
@@ -693,23 +696,24 @@ border: none; background:transparent; text-decoration:underline; color:#333;
 #sidebarTabs .tabSelected,#sidebarTabs .tabSelected:hover{background:#454545;border:none;color:#ccc; border:1px solid #454545;}
 #sidebarTabs .tabUnselected{background:#3B3B3B; border:1px solid #454545; color:#666;}
 
-   #sidebarTabs .txtMoreTab .tabSelected,
-   #sidebarTabs .txtMoreTab .tab:hover,
-   #sidebarTabs .txtMoreTab .tabContents{
+#sidebarTabs .txtMoreTab .tabSelected,
+#sidebarTabs .txtMoreTab .tab:hover,
+#sidebarTabs .txtMoreTab .tabContents {
 color: #ccc;
 background: #3B3B3B; border:1px solid #3B3B3B;
 }
 
-   #sidebarTabs .txtMoreTab .tabUnselected {
-
+#sidebarTabs .txtMoreTab .tabUnselected {
 color: #777; border:1px solid #3B3B3B;
 background: #454545;
 }
 
+#sidebarTabs .tabContents .button:hover,
+#sidebarTabs .tabContents .highlight,
+#sidebarTabs .tabContents .marked,
+#sidebarTabs .tabContents a.button:active {color:#ccc; background:transparent;}
 
-#sidebarTabs .tabContents .button:hover, #sidebarTabs .tabContents .highlight, #sidebarTabs .tabContents .marked, #sidebarTabs .tabContents a.button:active{color:#ccc; background:transparent;}
-
-   #sidebarOptions .sliderPanel {
+#sidebarOptions .sliderPanel {
 background: #454545; font-size: .9em;
 }
 
@@ -750,7 +754,7 @@ border: none;
 	border-bottom: 1px;
 }
 
-.listBreak div{
+.listBreak div {
 	border-bottom: 1px solid #777;
 }
 
@@ -761,15 +765,12 @@ color: #777;
 font-size:90%;
 }
 
-#messageArea .button{
-
+#messageArea .button {
 color: #3B3B3B;
 background:#ccc;
 border: 1px solid #ccc;
 }
-
 #messageArea .button:hover {
-
 color: #ccc;
 background: #3B3B3B;
 border-color: #3B3B3B;
