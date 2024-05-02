@@ -562,8 +562,8 @@ body {font-size:0.8em;}
 <div title="MonochromeTheme" modifier="Yakov Litvin" created="202404281543" modified="202404281543">
 <pre>/***
 |Description  |Monochrome Theme for ~TiddlyWiki|
-|Author       |Design and CSS by Saq Imtiaz; packing into a theme by Yakov Litvin|
-|Version      |1.0|
+|Author       |Design and CSS by Saq Imtiaz; packing into a theme, updates by Yakov Litvin|
+|Version      |1.1|
 |Source       |https://yakovl.github.io/TiddlyThemes/themes/monochromel#MonochromeTheme|
 |~PageTemplate|##PageTemplate|
 |~StyleSheet|##StyleSheet|
@@ -587,16 +587,23 @@ body {font-size:0.8em;}
 
 !StyleSheet
 /*{{{*/
-body {background:#3B3B3B; color:#C3C3C3; font:12px Verdana, Helvetica, sans-serif;
-	}
+body {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+}
+/* .title: same as body, denser than elements below */
+#header, h1, h2, h3, h4, h5 {
+	font-family: Arial, Helvetica, sans-serif;
+}
 
-#header {padding: 0em 0em 0em 0em; background:transparent;	font-family: arial,helvetica; font-size:12px;
- }
+
+body { background:#3B3B3B; color:#C3C3C3;}
+
+#header {padding: 0em 0em 0em 0em; background:transparent;	font-size:12px;}
 
 .siteTitle {
 padding-top:5px;
 float:left;
-font-family: 'Trebuchet MS' sans-serif;
 font-weight: bold;
 font-size: 32px;
 color: #ccc; margin-right:2em;margin-left:0.5em;
@@ -630,8 +637,7 @@ background: #3B3B3B;
 border-color: #3B3B3B;
 }
 
-.title {color:#ccc; font-family:'Lucida Grande', Verdana, Sans-Serif; font-size:1.5em;
-}
+.title {color:#ccc; font-size:1.5em;}
 
 .subtitle, .subtitle a { color: #777; font-size: 0.95em;margin:0.2em;}
 .shadow .title{color:#777;}
@@ -675,9 +681,6 @@ border: none; background:transparent; text-decoration:underline; color:#333;
 
 #sidebarOptions {margin-top:1em;}
 #sidebar {margin-right:1.35em;}
-
-#sidebarTabs .tabContents {	
-	font-family: arial,helvetica;}
 
 #sidebarOptions a, #sidebarOptions a:hover{border:none;color:#666;}
 #sidebarOptions a:hover, #sidebarOptions a:active {background:#454545; color:#ccc;}
@@ -807,7 +810,7 @@ border: 1px solid #ccc; margin-top:5px;
 border: 1px solid #ccc;
 }
 
-h1,h2,h3,h4,h5 { color: 		#9c9c9c; background: transparent; padding-bottom:2px; font-family: Arial, Helvetica, sans-serif; }
+h1,h2,h3,h4,h5 { color: 		#9c9c9c; background: transparent; padding-bottom:2px; }
 h1 {font-size:18px;}
 h2 {font-size:16px;}
 h3 {font-size: 14px;}
