@@ -1,0 +1,11 @@
+|Source |https://github.com/YakovL/TiddlyThemes/blob/master/ThemesCollection.txt|
+|Version|0.0.1|
+See the other themes https://yakovl.github.io/TiddlyThemes/ and also https://responsive.tiddlyhost.com
+//{{{
+[
+  {
+    "url": "https://yakovl.github.io/TiddlyThemes/themes/blackicity.html#BlackicityTheme",
+    "description": "A black-gray-and-white theme"
+  }
+]
+//}}}
