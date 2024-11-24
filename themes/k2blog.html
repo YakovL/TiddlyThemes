@@ -555,8 +555,18 @@ body {font-size:0.8em;}
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
-<div title="PageTemplate" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="K2BlogTheme">
-<pre>&lt;div class='header'  macro='gradient vert #FFF #FFF '&gt;
+<div title="SystemSettings" modifier="Yakov Litvin" created="202411241117" modified="202411241117">
+<pre>txtTheme: K2BlogTheme
+</pre>
+</div>
+<div title="K2BlogTheme" modifier="TiddlyThemes" created="202411220013" modified="202411220013">
+<pre>
+|Source       |https://yakovl.github.io/TiddlyThemes/themes/k2blog.html#K2BlogTheme|
+|~PageTemplate|##PageTemplate|
+|~StyleSheet|##StyleSheet|
+!PageTemplate
+&lt;!--{{{--&gt;
+&lt;div class='header'  macro='gradient vert #FFF #FFF '&gt;
      &lt;div class='gradient'&gt;                
 	&lt;div class='titleLine' &gt;
 &lt;span class='searchBar' macro='search'&gt;&lt;/span&gt;
@@ -577,42 +587,29 @@ body {font-size:0.8em;}
 &lt;/div&gt;
 &lt;div id='displayFooter'&gt;&lt;/div&gt;
 &lt;/div&gt;
-</pre>
-</div>
-<div title="SideBarOptions" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="K2BlogTheme">
-<pre>&lt;&lt;closeAll&gt;&gt;&lt;&lt;permaview&gt;&gt;&lt;&lt;newTiddler&gt;&gt;&lt;&lt;newJournal 'DD MMM YYYY'&gt;&gt;&lt;&lt;saveChanges&gt;&gt;&lt;&lt;slider chkSliderOptionsPanel OptionsPanel 'options »' 'Change TiddlyWiki advanced options'&gt;&gt;</pre>
-</div>
-<div title="StyleSheet" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="K2BlogTheme">
-<pre>
-/***
-Inspired by k2
+&lt;!--}}}--&gt;
 
-!General
-***/
+!StyleSheet
 /*{{{*/
+/* General */
 body {
  background: #EDEDED;
 }
 
- #contentWrapper{
+#contentWrapper {
  background: #fff;
- border:1px solid #DDD;
+ border: 1px solid #DDD;
  margin: 0 auto;
  width: 780px;
- padding:0;
+ padding: 0;
 }
-/*}}}*/
 
-
-/***
-!Links
-***/
-/*{{{*/
+/* Links */
 a,
 a.tiddlyLink,
 a.button,
 a.externalLink,
-#sidebarOptions .sliderPanel a{
+#sidebarOptions .sliderPanel a {
  color: #1D65BC;
  text-decoration: none;
  background: transparent;
@@ -623,25 +620,20 @@ a:hover,
 a.tiddlyLink:hover,
 a.button:hover,
 a.externalLink:hover,
-#sidebarOptions .sliderPanel a:hover
-{
+#sidebarOptions .sliderPanel a:hover {
  border: 0;
  color: #1D65BC;
  text-decoration: underline;
-background:transparent;
+ background: transparent;
 }
 .button:active {background:#1d65bc; border:0;}
 .viewer .button:active, .viewer .marked, .viewer .highlight {
-color: #fff !important;
-background: #3371a3;
-border: 0;
+ color: #fff !important;
+ background: #3371a3;
+ border: 0;
 }
-/*}}}*/
 
-/***
-!Header
-***/
-/*{{{*/
+/* Header */
 .gradient {margin-top:20px; background:#3371A3;}
 
 .titleLine{padding: 80px 40px 32px 40px;}
@@ -651,23 +643,19 @@ border: 0;
 .titleLine a{color:#fff; border-bottom:1px dotted #ccc;}
 
 .siteTitle {
-	font-size: 2.2em;
-        font-weight: bold;
-        color:#fff;
+ font-size: 2.2em;
+ font-weight: bold;
+ color: #fff;
 }
 
 .siteSubtitle {
-	font-size: 1.0em;
-        display: block;
-        margin: .3em auto 1em;
-color:#fff;
+ font-size: 1.0em;
+ display: block;
+ margin: .3em auto 1em;
+ color: #fff;
 }
-/*}}}*/
 
-/***
-!TopMenu
-***/
-/*{{{*/
+/* TopMenu */
 #topMenu br {display:none;  }
 #topMenu { background: #3371A3; font-size:1em; }
 #topMenu { padding:5px 32px; }
@@ -678,28 +666,20 @@ color:#fff;
 }
 #topMenu a.button:hover, #topMenu a.tiddlyLink:hover { background:#fff; color:#333; text-decoration:none;}
 
- .searchBar {float:right; font-size:0.9em;}
+.searchBar {float:right; font-size:0.9em;}
 .searchBar .button {display:block; border:none; color:#ccc;}
 .searchBar .button:hover{border:none; color:#eee;}
 
-.searchBar input{
-	border: 1px inset #1d65bc; background:#dbdee3;
+.searchBar input {
+ border: 1px inset #1d65bc; background:#dbdee3;
 }
 
 .searchBar input:focus {
-	border: 1px inset #3371a3; background:#fff;
+ border: 1px inset #3371a3; background:#fff;
 }
-/*}}}*/
 
-/***
-!Display
-***/
-/***
-!!!Display General
-***/
-/*{{{*/
-
-
+/* Display */
+/*  Display General  */
 #displayArea { margin: 0em 15.7em 0em 1em; }
 
 #displayFooter {
@@ -710,11 +690,8 @@ color:#fff;
 }
 
 #tiddlerDisplay{padding-top:1em;}
-/*}}}*/
-/***
-!!!Tiddler
-***/
-/*{{{*/
+
+/*  Tiddler  */
 .tiddler {margin-bottom:1em; padding-bottom:1em;}
 
 .tiddler {padding-left:2em;}
@@ -724,20 +701,20 @@ color:#fff;
 .subtitle { font-size:90%; color:#bbb; padding-left:0.25em; margin-top:0.1em; }
 
 .shadow .title {
-	color: #aaa;
+ color: #aaa;
 }
 
 h1,h2,h3,h4,h5 { color: #333; background: transparent; padding-bottom:2px; border-bottom: 1px dotted #666; }
 
 * html .viewer pre {
-	margin-left: 0em;
+ margin-left: 0em;
 }
 
 .viewer hr {
-	border: 0;
-	border-top: solid 1px #333;
+ border: 0;
+ border-top: solid 1px #333;
  margin: 0 8em;
-	color: #333;
+ color: #333;
 }
 
 .viewer a.button {color:#000; border:1px solid #1D65BC; font-weight:bold;}
@@ -756,120 +733,113 @@ h1,h2,h3,h4,h5 { color: #333; background: transparent; padding-bottom:2px; borde
 h1,h2,h3,h4,h5 { color: #333; background: transparent; padding-bottom:2px; border-bottom: none; }
 
 .viewer pre, .viewer code {
-border: 1px solid #B2B6BE;
-background: #EBEEF1;} 
+ border: 1px solid #B2B6BE;
+ background: #EBEEF1;
+}
 
 
 
 .tagging, .tagged {
-	border: 1px solid #dbdee3;
-	background-color: #ebeef1;
+ border: 1px solid #dbdee3;
+ background-color: #ebeef1;
 }
 
 .selected .tagging, .selected .tagged {
-	background-color: #dbdee3;
-	border: 1px solid #B2B6BE;
+ background-color: #dbdee3;
+ border: 1px solid #B2B6BE;
 }
 
- .tagging .listTitle, .tagged .listTitle {
-	color: #bbb;
+.tagging .listTitle, .tagged .listTitle {
+ color: #bbb;
 }
 
 .selected .tagging .listTitle, .selected .tagged .listTitle {
-	color: #014; 
+ color: #014; 
 }
 
 .tagging .button:hover, .tagged .button:hover {
-		border: none; background:transparent; text-decoration:underline; color:#014;
+ border: none;
+ background: transparent;
+ text-decoration: underline;
+ color:#014;
 }
 
-.tagged .highlight, .tagged .marked, .tagged a.button:active {text-decoration:underline; background:transparent; color:#014;}
+.tagged .highlight, .tagged .marked, .tagged a.button:active {
+ text-decoration: underline;
+ background: transparent;
+ color: #014;
+}
 
 .tagging .button, .tagged .button {
-		color:#bbb;
+ color: #bbb;
 }
 
 .selected .tagging .button, .selected .tagged .button {
-		color:#014;
+ color: #014;
 }
 
 .viewer blockquote {
-	border-left:7px solid #ebeef1;
+ border-left: 7px solid #ebeef1;
 }
 
 .viewer table {
-	border: 1px solid #3371a3;
+ border: 1px solid #3371a3;
 }
 
 .viewer th, thead td {
-	background: #3371a3;
-	border: 1px solid #3371a3;
-	color: #fff;
+ background: #3371a3;
+ border: 1px solid #3371a3;
+ color: #fff;
 }
 
 .viewer td, .viewer tr {
-	border: 1px solid #3371a3;
+ border: 1px solid #3371a3;
 }
-/*}}}*/
-/***
-!!!Editor
-***/
-/*{{{*/
 
+/*  Editor  */
 * html .editor textarea, * html .editor input {
-	width: 98%;
+ width: 98%;
 }
 .editor input, .editor textarea {
-	border: 1px solid #1d65bc; background:#ebeef1;
+ border: 1px solid #1d65bc; background: #ebeef1;
 }
 
 .editor {padding-top:0.3em;}
 
 .editor textarea:focus, .editor input:focus {
-	border: 1px inset #3371a3; background:#fff;
-}
-/*}}}*/
-
-
-
-
-
-
-
-/***
-!Sidebar
-***/
-/*{{{*/
-#sidebar{
-position:relative;
-float:right;
-margin-bottom:1em;
-display:inline;
-width: 16em;
+ border: 1px inset #3371a3; background: #fff;
 }
 
 
+
+/* Sidebar */
+#sidebar {
+ position: relative;
+ float: right;
+ margin-bottom: 1em;
+ display: inline;
+ width: 16em;
+}
+   
 #sidebar .tabSelected, #sidebar .tabSected:hover {
  color: #000;
  background: #dbdee3;
  border-top: solid 1px #B2B6BE;
  border-left: solid 1px #B2B6BE;
  border-right: solid 1px #B2B6BE;
- border-bottom:solid 1px #dbdee3 !important;
-padding-bottom:1px;
-text-decoration:none;
+ border-bottom: solid 1px #dbdee3 !important;
+ padding-bottom: 1px;
+ text-decoration: none;
 }
 
 #sidebarOptions, #sidebarTabs  {border-left: 1px solid #B2B6BE;}
 #sidebarTabs {border-bottom: 1px solid #B2B6BE;}
 
-
-
 #sidebar .tabUnselected, #sidebar .tabUnselected:hover {
-color: #F0F3F5;
-background: #B2B6BE ;
-border: solid 1px #B2B6BE ;
-padding-bottom:1px;
+ color: #F0F3F5;
+ background: #B2B6BE;
+ border: solid 1px #B2B6BE;
+ padding-bottom:1px;
 }
 
 #sidebarTabs .tabContents {border:none; background:#DBDEE3; }
@@ -879,120 +849,107 @@ padding-bottom:1px;
 #sidebarTabs .tabContents .tabContents {border-left:1px solid #b2b6be;}
 
 #sidebarOptions .sliderPanel {
-	background: #EBEEF1; border:none;
+ background: #EBEEF1;
+ border: none;
 }
 
 #sidebarOptions input {
-	border: 1px solid #1d65bc;
+ border: 1px solid #1d65bc;
 }
 
 #sidebarOptions input:hover, #sidebarOptions input:active,  #sidebarOptions input:focus {
-	border: 1px inset #3371a3;
+ border: 1px inset #3371a3;
 }
 
 #sidebar {background: #EBEEF1 ; right:0;}
 
 #sidebar .button:active, #sidebar .marked, #sidebar .highlight {color:#014; background:transparent;text-decoration:none}
-/*}}}*/
 
-/***
-!!Popups
-***/
-/*{{{*/
+/* Popups */
 .popup {
-	background: #3371a3;
-	border: 1px solid #333;
+ background: #3371a3;
+ border: 1px solid #333;
 }
 
 .popup hr {
-	color: #333;
-	background: #333;
-	border-bottom: 1px;
+ color: #333;
+ background: #333;
+ border-bottom: 1px;
 }
 
 .popup li.disabled {
-	color: #333;
+ color: #333;
 }
 
 .popup li a, .popup li a:visited {
-	color: #eee;
-	border: none;
+ color: #eee;
+ border: none;
 }
 
 .popup li a:hover {
-	background: #3371a3;
-	color: #fff;
-	border: none;
-        text-decoration:underline;
+ background: #3371a3;
+ color: #fff;
+ border: none;
+ text-decoration:underline;
 }
-/*}}}*/
 
-
-
-
-/***
-!!Message Area
-***/
-/*{{{*/
-
+/* Message Area */
 #messageArea {
-	border: 2px dashed #3371a3;
-	background: #dbdee3;
-	color: #fff;
-        font-size:90%;
+ border: 2px dashed #3371a3;
+ background: #dbdee3;
+ color: #fff;
+ font-size:90%;
 }
 
 #messageArea .button {
-	color: #1d65bc;
-	background: #ebeef1;
-        text-decoration:none;
-        font-weight:bold;
-        border:none; 
+ color: #1d65bc;
+ background: #ebeef1;
+ text-decoration: none;
+ font-weight: bold;
+ border: none;
 }
 
 #messageArea a.button {color:#1d65bc;}
 
 #messageArea .button:hover {text-decoration:underline;}
-/*}}}*/
-/***
-!!Tabs
-***/
-/*{{{*/
+
+/* Tabs */
 .viewer .tabSelected, .viewer .tabSelected:hover{
-	color: #014;
-	background: #eee;
-	border-left: 1px solid #B2B6BE;
-	border-top: 1px solid #B2B6BE;
-	border-right: 1px solid #B2B6BE;
+ color: #014;
+ background: #eee;
+ border-left: 1px solid #B2B6BE;
+ border-top: 1px solid #B2B6BE;
+ border-right: 1px solid #B2B6BE;
 }
-
+   
 .viewer .tabUnselected, .viewer .tabUnselected:hover {
-	color: #fff;
-	background: #B2B6BE;
+ color: #fff;
+ background: #B2B6BE;
+}
+   
+.viewer .tabContents {
+ color: #014;
+ background: #ebeef1;
+ border: 1px solid #B2B6BE;
 }
 
-. viewer .tabContents {
-	color: #014;
-	background: #ebeef1;
-	border: 1px solid #B2B6BE;
-}
-/*}}}*/
+/* _ */
 .blog h2, .blog h3, .blog h4{
-  margin:0;
-  padding:0;
-border-bottom:none;
+ margin: 0;
+ padding: 0;
+ border-bottom: none;
 }
 .blog {margin-left:1.5em;}  
 
 
 .blog .excerpt {
-  margin:0;
-margin-top:0.3em;
-  padding: 0;
-  margin-left:1em;
-  padding-left:1em;
-  font-size:90%;
-  border-left:1px solid #ddd;
+ margin: 0;
+ margin-top: 0.3em;
+ margin-left: 1em;
+ padding: 0;
+ padding-left: 1em;
+ font-size: 90%;
+ border-left: 1px solid #ddd;
 }
 
 #tiddlerWhatsNew h1, #tiddlerWhatsNew h2 {border-bottom:none;}
@@ -1011,7 +968,12 @@ div[tags~=&quot;RecentUpdates&quot;], div[tags~=&quot;lewcidExtension&quot;] {ma
 #sidebarTabs .txtMoreTab .tiddlyLinkExisting {
  font-weight: bold;
  font-style: normal;
-}</pre>
+}
+/*}}}*/
+</pre>
+</div>
+<div title="SideBarOptions" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="K2BlogTheme">
+<pre>&lt;&lt;closeAll&gt;&gt;&lt;&lt;permaview&gt;&gt;&lt;&lt;newTiddler&gt;&gt;&lt;&lt;newJournal 'DD MMM YYYY'&gt;&gt;&lt;&lt;saveChanges&gt;&gt;&lt;&lt;slider chkSliderOptionsPanel OptionsPanel 'options »' 'Change TiddlyWiki advanced options'&gt;&gt;</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
