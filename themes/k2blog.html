@@ -561,6 +561,7 @@ body {font-size:0.8em;}
 </div>
 <div title="K2BlogTheme" modifier="TiddlyThemes" created="202411220013" modified="202411220013">
 <pre>
+|Version      |1.0|
 |Source       |https://yakovl.github.io/TiddlyThemes/themes/k2blog.html#K2BlogTheme|
 |~PageTemplate|##PageTemplate|
 |~StyleSheet|##StyleSheet|
@@ -820,7 +821,11 @@ h1,h2,h3,h4,h5 { color: #333; background: transparent; padding-bottom:2px; borde
  display: inline;
  width: 16em;
 }
-   
+
+#sidebar .searchButton, #sidebar .searchField {
+ display: none;
+}
+
 #sidebar .tabSelected, #sidebar .tabSected:hover {
  color: #000;
  background: #dbdee3;
@@ -971,9 +976,6 @@ div[tags~=&quot;RecentUpdates&quot;], div[tags~=&quot;lewcidExtension&quot;] {ma
 }
 /*}}}*/
 </pre>
-</div>
-<div title="SideBarOptions" modifier="TiddlyThemes" created="200701130013" modified="200708091512" tags="K2BlogTheme">
-<pre>&lt;&lt;closeAll&gt;&gt;&lt;&lt;permaview&gt;&gt;&lt;&lt;newTiddler&gt;&gt;&lt;&lt;newJournal 'DD MMM YYYY'&gt;&gt;&lt;&lt;saveChanges&gt;&gt;&lt;&lt;slider chkSliderOptionsPanel OptionsPanel 'options »' 'Change TiddlyWiki advanced options'&gt;&gt;</pre>
 </div>
 </div>
 <!--POST-STOREAREA-->
